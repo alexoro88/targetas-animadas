@@ -7,6 +7,7 @@
 }
 .card{
     flex: 0.5;
+    position: relative;
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 100%;
@@ -21,8 +22,30 @@
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
+.text{
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
 
 .active{
-    flex: 2;
+    flex: 1.8;
+}
+
+.active .text{
+    opacity: 100;
+    user-select: none;
+    transition: opacity 0.2s ease-in 0.2s;
+    -webkit-transition: opacity 0.2s ease-in 0.2s;
+    -moz-transition: opacity 0.2s ease-in 0.2s;
+    -ms-transition: opacity 0.2s ease-in 0.2s;
+    -o-transition: opacity 0.2s ease-in 0.2s;
 }
 
